@@ -4,7 +4,10 @@
 # body of put_answer()
 # 
 
-Class Question():
+
+
+
+class Question:
     def __init__(self, text, options):
         self.text = text
         self.options = options
@@ -23,15 +26,25 @@ Class Question():
     def get_info():
         return (self.get_text(), self.get_options())
 
+questions = {
+	"1" : Question("Has the project a fixed end date", {"Yes": 2, "(No)": None}),
+    "2" : Question("Is there a single developer/maintainer of the project?", {"Yes": 3, "(No)": None}),
+    "3" : Question("Is there secured funding to cover ongoing support", {"(Yes)": None, "No": 4}),
+    "4" : Question("Do you hope to secure funding to cover ongoing support?", {"Yes": 5, "(No)": None}),
+    "5" : Question("What type of ongoing maintenence do you intend to provide?", {"(Answer queries)": None, "(Implement requested features)": None, "Review merge requests": None, "(Curate issues page)": None})
+}
+
 question_returned = ("question text", question[1].keys())
+
+
 
 # example data structure containing questions
 # format is {id: question}
-example={
-    1: Question("example text 1",  {"option 1 ": 2, "option 2": 3}),
-    2: Question("example text 2",  {"option 1 ": 2, "option 2": 3}),
-    3: Question("example text 3",  {"option 1 ": 2, "option 2": 3}), 
-}
+#example = {
+#    1: Question("example text 1",  {"option 1 ": 2, "option 2": 3}),
+#    2: Question("example text 2",  {"option 1 ": 2, "option 2": 3}),
+#    3: Question("example text 3",  {"option 1 ": 2, "option 2": 3}), 
+#}
 
 answer_sheet = []
 
@@ -45,7 +58,7 @@ def get_question():
     an iterable of options, and
     the next steps for each option."""
     #status = boolean -if False get_badge-
-    q=questions[current_question]
+    q = questions[current_question]
     status = True
     return (status, q.get_info())
 
@@ -57,13 +70,19 @@ def put_answer(question_text, chosen_option):
     More questions True/False"""
     #chosen option = string
     answer_sheet.append((current_question, chosen_option))
-    q=questions[current_question]
+    q = questions[current_question]
     current_question = q.next_step(chosen_option)
-    status=True
+    if current_question == None:
+      status = False
+    else:
+      status = True
     return status
     
 def get_badge():
-    md_code="something"
+    return get_badges()
+
+def get_badges():
+    md_code = "[![Twilight Date](https://github.com/elichad/software-twilight/blob/main/twilight_date_example.svg)](https://github.com/elichad/software-twilight)\n[![Twilight Date](https://github.com/elichad/software-twilight/blob/main/twilight_plan_example.svg)](https://github.com/elichad/software-twilight)"
     return md_code
 
 def print_answers(responses):
