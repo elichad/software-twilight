@@ -64,12 +64,11 @@ Follow "Launch binder".
 
 ## Design
 
-The tool is designed in two parts: a front-end web-interface with which
-the user interacts to answer various questions (in the form of a decision
-tree); and a back-end which communicates questions, processes answers and
-pops out a badge for onward display.
+The tool is designed in three parts: 
 
-It's so Python.
+- The front-end is designed with Jupyer Notebooks. It uses Jupyter Widgets, `appmode` package and `mybinder.org` to display automatically the notebook cells as a web app. 
+- The questions and answers are populated by the backend, that provides the appropriate next question based on the answer to the previous one, following a decision tree, until there are no more (relevant) questions to ask.
+- Finally, all the answers are processed and one or more badges informing on the end-of-life status of the project are provided in the form of markdown text. A summary of the answers is also provided. This text can be easily pasted into the project README file. 
 
 ### Question format
 
