@@ -21,9 +21,12 @@ The full text of the license can be found [here](https://github.com/elichad/soft
 
 Development of software under a fixed-term project should consider several
 aspects of ongoing support after the project's end.  There are two main
-eventualities: the software's development abruptly ends; although not seeing
-more feature development there is some end-user support.  Each of these
-means a problem.  Ending of support reduces the sustainability of the
+eventualities:
+
+1. the software's development abruptly ends;
+2. there is some end-user support, although there will be no new feature development.
+
+Each of these presents a problem. Ending support reduces the sustainability of the
 environment, while ongoing maintenance requires the dedication of further
 resources.
 
