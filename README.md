@@ -37,8 +37,8 @@ guide a project maintainer in plans for the software's end of life.
 
 We provide a tool to be used, _during the active development phase_, by a
 project maintainer to assess and certify support plans for the project once
-it will not longer be actively developed.  On completion of a short
-questionnaire the user is offered a badge to add tothe repository to signal
+it will no longer be actively developed.  On completion of a short
+questionnaire the user is offered a badge to add to the repository to signal
 to the community when, and how, the software will go gentle into its good
 night.
 
@@ -92,7 +92,8 @@ decision_tree = {
 `decision_tree` is an object with (contiguous, [1,n]?) numeric identifier
 and a `Question` object with question text and answer dictionary.  The
 answer dictionary keys are answer text (diplayed) and the value the link to
-the question to follow.
+the question to follow.  `None` is used to indicate that a decision will be
+reached with this answer.
 
 In this prototype there is no full decision tree.  We indicate the path to
 follow by placing non-supported answers in parentheses.
