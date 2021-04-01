@@ -34,7 +34,7 @@ questions = {
     "5" : Question("What type of ongoing maintenence do you intend to provide?", {"(Answer queries)": None, "(Implement requested features)": None, "Review merge requests": None, "(Curate issues page)": None})
 }
 
-question_returned = ("question text", question[1].keys())
+#question_returned = ("question text", question[1].keys())
 
 
 
@@ -58,7 +58,7 @@ def get_question():
     an iterable of options, and
     the next steps for each option."""
     #status = boolean -if False get_badge-
-    q = questions[current_question]
+    q = questions[str(current_question)]
     status = True
     return (status, q.get_info())
 
@@ -70,7 +70,7 @@ def put_answer(question_text, chosen_option):
     More questions True/False"""
     #chosen option = string
     answer_sheet.append((current_question, chosen_option))
-    q = questions[current_question]
+    q = questions[str(current_question)]
     current_question = q.next_step(chosen_option)
     if current_question == None:
       status = False
