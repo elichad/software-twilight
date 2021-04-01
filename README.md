@@ -107,9 +107,9 @@ of a sustainable project.  FAIRness, etc.
 
 ## Known issues
 
-This is a proof of concept.  It is not complete.  We have a desire that the
-following features are implemented:
+This is a proof of concept.  It is far from complete.  We have a desire that
+the following features be implemented:
 
 * Improved decision tree input (not deserialization)
-* BUG2
-* BUG3
+* Complete decision tree
+* Final badge choice and design
