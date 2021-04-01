@@ -72,7 +72,10 @@ def put_answer(question_text, chosen_option):
     answer_sheet.append((current_question, chosen_option))
     q = questions[current_question]
     current_question = q.next_step(chosen_option)
-    status = True
+    if current_question == None:
+      status = False
+    else:
+      status = True
     return status
     
 def get_badge():
