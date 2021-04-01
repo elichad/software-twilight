@@ -9,7 +9,8 @@ Class Question():
 		self.text = text
 		self.options = options
 
-	
+	@property
+	def text(self, value),
 
 question_returned = ("question text", question[1].keys())
 
