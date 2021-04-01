@@ -59,7 +59,10 @@ def get_question():
     the next steps for each option."""
     #status = boolean -if False get_badge-
     q = questions[str(current_question)]
-    status = True
+    if current_question == None:
+      status = False
+    else:
+      status = True
     return (status, q.get_info())
 
 # should return the response and add
