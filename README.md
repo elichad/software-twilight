@@ -1,4 +1,5 @@
 [![Binder](https://mybinder.org/badge.svg)](https://mybinder.org/v2/gh/elichad/software-twilight/main?urlpath=apps%2Findex.ipynb)
+
 <a rel="license" href="http://creativecommons.org/licenses/by/4.0/"><img alt="Creative Commons License" style="border-width:0" src="https://i.creativecommons.org/l/by/4.0/88x31.png" /></a><br />This work is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by/4.0/">Creative Commons Attribution 4.0 International License</a>.
 
 # software-twilight
@@ -43,10 +44,10 @@ night.
 
 ## Available badges
 
-We have badges which look look like and mean the following:
-* BADGE1 - we have a (good) plan
-* BADGE2 - twilight is coming up at THIS TIME
-* BADGE3 - we followed a slightly different decision path
+We have two badges, as examples, which look look like and mean the following:
+* [![Twilight Plan](https://github.com/elichad/software-twilight/blob/main/twilight_plan_example.svg)](https://github.com/elichad/software-twilight) - we have a (good) plan
+* [![Twilight Date](https://github.com/elichad/software-twilight/blob/main/twilight_date_example.svg)](https://github.com/elichad/software-twilight) - twilight is coming up at the specified time
+
 
 ## Question themes
 
